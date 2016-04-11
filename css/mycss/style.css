@@ -1,0 +1,443 @@
+@font-face {
+  font-family:opensans;
+  src:url('../../fonts/myfont/opensans.ttf');
+}
+@font-face {
+  font-family:Railway;
+  src:url('../../fonts/myfont/Railway.ttf');
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	font-family: Arial, Helvetica, sans-serif;
+}
+.clear{
+	clear: both;
+	text-align: center;
+}
+a{
+	text-decoration: none;
+	outline: none;
+}
+a:focus{
+	outline: none;
+}
+/* img slider  ---------------------------------------------------------------------------------------------*/
+.slider-wrapper{
+	position: relative;
+	overflow-x: hidden;
+}
+.slider-wrapper .h-tag{
+	position: absolute;
+	z-index: 99;
+	top: 36%;
+	left: 50%;
+	/*width: 88%;*/  /* 配合left: 50%;和transform: translate(-50%,-50%);导致ie X轴溢出的元凶 */
+	white-space: nowrap;	/* 没了宽度，使用这种方式使文字不换行,但ie X轴又溢出，因此在父级设置flow hiden*/
+	transform: translate(-50%,-50%);
+	text-align: center;
+	padding: 0 15px;
+}
+/* .h-tag 下有两层：h2层和透明层 */
+.slider-wrapper .h-tag:after{
+	/* h2的透明背景层 */
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 8;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #fff;
+	border-radius: 16px;
+	opacity: .36;
+}
+.slider-wrapper .h-tag h2{
+	/* h2比它的透明背景层高一层 */
+	position: relative;
+	z-index: 9;
+	color: #212121;
+}
+.slider-wrapper .h-tag h2:nth-of-type(1) , .slider-wrapper .h-tag h2:nth-of-type(2){
+	font-family: opensans;
+	font-size: 54px;
+}
+.slider-wrapper .h-tag h2:nth-of-type(3){
+	font-size: 48px;
+	color: #9C3426;
+	font-family: Railway;
+	font-weight: normal;
+}
+
+/*  section-2 ----------------------------------------------------------------------------------------------*/
+.section-2{
+	background: #232526; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #232526, #414345);
+    background: -o-linear-gradient(right, #232526, #414345);
+    background: linear-gradient(to right, #232526, #414345);
+    padding: 108px 72px 96px 72px;
+}
+.section-2 p{
+	width: 86%;
+	text-align: center;
+	line-height: 1.6;
+	margin: 0 auto 56px auto;
+	color: #9C3426;
+	font-size: 36px;
+}
+.section-2 .btn-col{
+	float: left;
+	width: 20%;
+	text-align: center;
+	margin: 12px 0;
+}
+.section-2 .btn-col > a{
+	background: transparent;
+	display: inline-block;
+	color: #e1e1e1;
+	border: 2px solid #e1e1e1;
+	border-radius: 8px;
+	width: 232px;
+	padding: 12px 0;
+	font-size: 20px;
+	cursor: pointer;
+	transition: all .3s ease-out;
+}
+.section-2 .btn-col > a:hover{
+	color: #232526;
+	background: #e1e1e1;
+}
+
+/*  section-3 ----------------------------------------------------------------------------------------------*/
+.section-3{
+	background: url(../../imgs/bg/section-3-bg.jpg) center center no-repeat;
+	background-attachment: fixed;
+	background-size: 100% auto;
+	padding: 108px 0 36px 0;
+}
+.section-3 p{
+	width: 86%;
+	text-align: center;
+	line-height: 1.6;
+	margin: 0 auto 56px auto;
+	color: #e1e1e1;
+	font-size: 36px;
+}
+.section-3 p span{
+	color: #9C3426;
+}
+.section-3 .social-icon{
+	text-align: center;
+}
+.section-3 .social-icon a{
+	display: inline-block;
+	padding: 0 12px;
+	font-size: 64px;
+	color: #333;
+	position: relative;
+	transition: all .3s ease-out;
+}
+.section-3 .social-icon a:after{
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 8;
+	top: 0;bottom: 0;left: 0;right: 0;
+	background: #fff;
+	opacity: 0.72;
+	border-radius: 8px;
+	transition: all .3s ease-out;
+}
+.section-3 .social-icon a i{
+	position: relative;
+	z-index: 9;
+}
+.section-3 .social-icon a:hover{
+	color: #fff;
+}
+.section-3 .social-icon a:hover:after{
+	background: #333;
+	opacity: 1;
+}
+
+/*  section-4 ----------------------------------------------------------------------------------------------*/
+.section-4{
+	background: #eee;
+    padding: 0 72px 108px 72px;
+}
+.section-4 .col{
+	float: left;
+	width: 25%;
+	text-align: center;
+	margin: 16px 0;
+}
+.section-4 .col > .img-wrapper{
+	width: 240px;
+	height: 240px;
+	box-shadow: 6px 4px 4px #aaa;
+	cursor: pointer;
+}
+.section-4 .col > .img-wrapper img{
+	width: 100%;
+	height: auto;
+}
+.section-4 .col .img-wrapper:hover{}/* sb IE要在这儿写个空的:hover才有hover.css文件的效果 */
+
+/*  section-5 ----------------------------------------------------------------------------------------------*/
+.section-5{
+	background: #232526; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #232526, #414345);
+    background: -o-linear-gradient(right, #232526, #414345);
+    background: linear-gradient(to right, #232526, #414345);
+    padding: 108px 72px 96px 72px;
+}
+.section-5 p{
+	width: 86%;
+	text-align: center;
+	line-height: 1.6;
+	margin: 0 auto 56px auto;
+	color: #e1e1e1;
+	font-size: 36px;
+}
+.section-5 button{
+	display: block;
+	margin: 0 auto;
+	background: transparent;
+	color: #e1e1e1;
+	border: 2px solid #e1e1e1;
+	border-radius: 8px;
+	padding: 12px 72px;
+	font-size: 20px;
+	cursor: pointer;
+	transition: all .3s ease-out;
+}
+.section-5 button:hover{
+	color: #232526;
+	background: #e1e1e1;
+}
+
+/*  map-section ----------------------------------------------------------------------------------------*/
+.map{
+	padding: 72px 0 24px 0;
+	background: #EEEEEE;
+}
+.map h2{
+	font-size: 36px;
+	text-align: center;
+	color: #9C3426;
+	margin-bottom: 60px;
+}
+.map-img-wrapper{
+	padding: 0 24px;
+	position: relative;
+}
+.map-img-wrapper > img{
+	width: 100%;
+	height: auto;
+	box-shadow: 6px 6px 6px #ccc;
+}
+.map-img-wrapper > p{
+	position: absolute;
+	color: #9C3426;
+	font-size: 18px;
+	width: 240px;
+	opacity: 0;
+}
+.map-img-wrapper > p:nth-of-type(1){
+	top: 36%;
+	left: 16%;
+}
+.map-img-wrapper > p:nth-of-type(2){
+	bottom: 19%;
+	left: 34%;
+}
+.map-img-wrapper > p:nth-of-type(3){
+	top: 28%;
+	left: 30.5%;
+	text-align: right;
+}
+.map-img-wrapper > p:nth-of-type(4){
+	top: 28%;
+	left: 52.5%;
+}
+.map-img-wrapper > p:nth-of-type(5){
+	top: 46%;
+	right: 14%;
+}
+.map-detail{
+	padding: 0 36px;
+	margin-top: 24px;
+}
+.map-detail .img-wrapper{
+	float: left;
+	width: 19%;
+	cursor: pointer;
+	overflow: hidden;
+	margin-bottom: 24px;
+}
+.map-detail .img-wrapper:nth-of-type(1),
+.map-detail .img-wrapper:nth-of-type(2),
+.map-detail .img-wrapper:nth-of-type(3),
+.map-detail .img-wrapper:nth-of-type(4){
+	margin-right: 1.25%;
+}
+.map-detail .img-wrapper img{
+	width: 100%;
+	height: auto;
+	transition: transform .3s ease-out;
+}
+.map-detail .img-wrapper img:hover{
+	transform: scale(1.06);
+}
+.map-detail .img-wrapper p{
+	background: #232526; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #232526, #414345);
+    background: -o-linear-gradient(right, #232526, #414345);
+    background: linear-gradient(to right, #232526, #414345);
+    color: #e1e1e1;
+	text-align: center;
+	padding: 4px 0;
+}
+
+/*  trip-section ---------------------------------------------------------------------------------------*/
+.trip-section{
+	background: #eee;
+	box-shadow: 4px 4px 4px #ccc;
+	padding: 60px 0 52px 0;
+}
+.trip-section > h2{
+	font-size: 36px;
+	text-align: center;
+	color: #9C3426;
+	margin-bottom: 24px;
+}
+.trip-detail{
+	padding: 0 36px;
+	margin-bottom: 56px;
+}
+.trip-detail h2{
+	font-size: 28px;
+	color: #454545;
+	padding: 18px 0;
+}
+.trip-detail .img-wrapper{
+	width: 23.5%;
+	float: left;
+	overflow: hidden;
+	cursor: pointer;
+}
+.trip-detail .img-wrapper:nth-of-type(1){
+	margin-right: 2%;
+}
+.trip-detail .img-wrapper:nth-of-type(2){
+	margin-right: 2%;
+}
+.trip-detail .img-wrapper:nth-of-type(3){
+	margin-right: 2%;
+}
+.trip-detail .img-wrapper img{
+	width: 100%;
+	height: auto;
+	transition: transform .3s ease-out;
+}
+.trip-detail .img-wrapper img:hover{
+	transform: scale(1.08);
+}
+.trip-detail .img-wrapper p{
+	background: #232526; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #232526, #414345);
+    background: -o-linear-gradient(right, #232526, #414345);
+    background: linear-gradient(to right, #232526, #414345);
+    color: #e1e1e1;
+	text-align: center;
+	padding: 8px 0;
+}
+
+/* footer --------------------------------------------------------------------------------------------- */
+.logo{
+	padding: 12px 0 4px 0;
+	text-align: center;
+}
+
+
+/* single page ---------------------------------------------------------------------------------------- */
+body.singlepage{
+	background: #e1e1e1; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #f1f1f1, #e1e1e1);
+    background: -o-linear-gradient(right, #f1f1f1, #e1e1e1);
+    background: linear-gradient(right, #f1f1f1, #e1e1e1);
+}
+.info{
+	padding: 0 180px;
+}
+.info img{
+	width: 100%;
+	height: auto;
+}
+.info h2{
+	font-size: 48px;
+	font-weight: normal;
+	margin-top: 36px;
+}
+.info span{
+	font-size: 32px;
+}
+.info h3{
+	font-size: 36px;
+	font-weight: normal;
+	margin: 48px 0 28px 0;
+}
+.info p{
+	font-size: 26px;
+	color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

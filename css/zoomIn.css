@@ -1,0 +1,21 @@
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation: zoomIn .8s cubic-bezier(.85,.7,.42,1.43);
+}
+.show{
+  opacity: 1 !important;
+}
+
+
+
